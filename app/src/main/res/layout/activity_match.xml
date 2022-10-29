@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MatchActivity">
+
+    <TextView
+        android:id="@+id/tvTeamA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Team A"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvTeamAScore"
+        app:layout_constraintEnd_toStartOf="@+id/tvTeamB"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/tvTeamAScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="0"
+        android:textColor="@color/black"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnTeamAPlus"
+        app:layout_constraintEnd_toEndOf="@+id/tvTeamA"
+        app:layout_constraintStart_toStartOf="@+id/tvTeamA"
+        app:layout_constraintTop_toBottomOf="@+id/tvTeamA" />
+
+    <Button
+        android:id="@+id/btnTeamAPlus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="+"
+        app:layout_constraintBottom_toTopOf="@+id/btnTeamAMinus"
+        app:layout_constraintEnd_toEndOf="@+id/tvTeamAScore"
+        app:layout_constraintStart_toStartOf="@+id/tvTeamAScore"
+        app:layout_constraintTop_toBottomOf="@+id/tvTeamAScore" />
+
+    <Button
+        android:id="@+id/btnTeamAMinus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        app:layout_constraintBottom_toTopOf="@+id/btnDone"
+        app:layout_constraintEnd_toEndOf="@+id/btnTeamAPlus"
+        app:layout_constraintStart_toStartOf="@+id/btnTeamAPlus"
+        app:layout_constraintTop_toBottomOf="@+id/btnTeamAPlus" />
+
+    <Button
+        android:id="@+id/btnReset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset"
+        app:layout_constraintBottom_toBottomOf="@+id/btnDone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnDone"
+        app:layout_constraintTop_toTopOf="@+id/btnDone" />
+
+    <TextView
+        android:id="@+id/tvTeamB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Team B"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvTeamBScore"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvTeamA"
+        app:layout_constraintTop_toTopOf="@+id/tvTeamA"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/tvTeamBScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="0"
+        android:textColor="@color/black"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnTeamBPlus"
+        app:layout_constraintEnd_toEndOf="@+id/tvTeamB"
+        app:layout_constraintStart_toStartOf="@+id/tvTeamB"
+        app:layout_constraintTop_toBottomOf="@+id/tvTeamB" />
+
+    <Button
+        android:id="@+id/btnTeamBPlus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="+"
+        app:layout_constraintBottom_toTopOf="@+id/btnTeamBMinus"
+        app:layout_constraintEnd_toEndOf="@+id/tvTeamB"
+        app:layout_constraintStart_toStartOf="@+id/tvTeamB"
+        app:layout_constraintTop_toBottomOf="@+id/tvTeamBScore" />
+
+    <Button
+        android:id="@+id/btnTeamBMinus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        app:layout_constraintBottom_toTopOf="@+id/btnDone"
+        app:layout_constraintEnd_toEndOf="@+id/btnTeamBPlus"
+        app:layout_constraintStart_toStartOf="@+id/btnTeamBPlus"
+        app:layout_constraintTop_toBottomOf="@+id/btnTeamBPlus" />
+
+    <Button
+        android:id="@+id/btnDone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Selesai"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnReset"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
